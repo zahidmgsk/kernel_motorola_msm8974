@@ -15,55 +15,54 @@
 
 LOCAL_PATH := $(call my-dir)
 
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := thermal.c
-LOCAL_MODULE := libshims_thermal
-LOCAL_MODULE_TAGS := optional
-include $(BUILD_SHARED_LIBRARY)
+#include $(CLEAR_VARS)
+#LOCAL_SRC_FILES := thermal.c
+#LOCAL_MODULE := libshims_thermal
+#LOCAL_MODULE_TAGS := optional
+#include $(BUILD_SHARED_LIBRARY)
 
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := SensorManager.cpp moto_camera_misc.c
-LOCAL_SHARED_LIBRARIES := libutils libgui liblog libbinder libsensor
-LOCAL_MODULE := libshim_camera
-LOCAL_MODULE_TAGS := optional
-include $(BUILD_SHARED_LIBRARY)
+#include $(CLEAR_VARS)
+#LOCAL_SRC_FILES := SensorManager.cpp moto_camera_misc.c
+#LOCAL_SHARED_LIBRARIES := libutils libgui liblog libbinder libsensor
+#LOCAL_MODULE := libshim_camera
+#LOCAL_MODULE_TAGS := optional
+#include $(BUILD_SHARED_LIBRARY)
 
-include $(CLEAR_VARS)
+#include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := atomic.cpp
+#LOCAL_SRC_FILES := atomic.cpp
 
-LOCAL_MODULE := libshims_atomic
-LOCAL_MODULE_TAGS := optional
-LOCAL_SHARED_LIBRARIES := liblog
+#LOCAL_MODULE := libshims_atomic
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_SHARED_LIBRARIES := liblog
 
-include $(BUILD_SHARED_LIBRARY)
+#include $(BUILD_SHARED_LIBRARY)
 
-include $(CLEAR_VARS)
+#include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := \
-    sensorlistener/ISensorServer.cpp \
-    sensorlistener/SensorManager.cpp
+#LOCAL_SRC_FILES := \
+#    sensorlistener/ISensorServer.cpp \
+#    sensorlistener/SensorManager.cpp
 
-LOCAL_MODULE := libshims_sensorlistener
-LOCAL_MODULE_TAGS := optional
-LOCAL_SHARED_LIBRARIES := \
-    libnativeloader \
-    libbinder \
-    libcutils \
-    libEGL \
-    libGLESv2 \
-    libsync \
-    libui \
-    libutils \
-    liblog \
-    libbase \
-    libsensor
-include $(BUILD_SHARED_LIBRARY)
-
+#LOCAL_MODULE := libshims_sensorlistener
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_SHARED_LIBRARIES := \
+#    libnativeloader \
+#    libbinder \
+#    libcutils \
+#    libEGL \
+#    libGLESv2 \
+#    libsync \
+#    libui \
+#    libutils \
+#    liblog \
+#    libbase \
+#    libsensor
+#include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := libqsap_shim.c
-LOCAL_SHARED_LIBRARIES := libqsap_sdk liblog libcutils libutils
+LOCAL_SHARED_LIBRARIES := libqsap_sdk liblog
 LOCAL_C_INCLUDES := $(TOP)/system/qcom/softap/sdk
 LOCAL_MODULE := libqsap_shim
 LOCAL_MODULE_TAGS := optional
